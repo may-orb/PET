@@ -103,9 +103,9 @@ perfil21_intermediario <- perfil21_intermediario %>%
     P4b == "Não-binário" ~ 5,
     TRUE ~ 6)) %>%
   mutate(P4b_outra = ifelse(
-                            P4b == "Queer",
-                            "Queer",
-                            ""
+                            P4b == "Homem CIS" | P4b == "Homem TRANS" | P4b == "Mulher CIS" | P4b == "Mulher TRANS" | P4b == "Não-binário",
+                            "",
+                            P4b
         )
   )
 
@@ -119,9 +119,9 @@ perfil21_intermediario <- perfil21_intermediario %>%
     P5 == "Pansexual" ~ 5,
     TRUE ~ 6)) %>%
   mutate(P5_outra = ifelse(
-                           P5 == "Questionando",
-                           "Questionando",
-                           ""
+                           P5 == "Assexual" | P5 == "Bissexual" | P5 == "Heterossexual" | P5 == "Homossexual" | P5 == "Pansexual",
+                           "",
+                           P5
                            )
   )
 
