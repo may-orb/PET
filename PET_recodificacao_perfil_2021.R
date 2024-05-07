@@ -20,7 +20,7 @@ getwd()
 # setwd("path/do/wd")
 
 # tratamento => selecionar todas as headers
-perfil21_intermediario <- perfil21 %>%
+perfil21_intermediario <- perfil21_original %>%
   select(`Nr. USP`,
          `P1. Data de Nascimento`,
          `P2. Cor (Critério IBGE)`,
